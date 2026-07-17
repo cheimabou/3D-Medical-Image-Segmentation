@@ -232,7 +232,7 @@ def main(args):
     print(f"Prefetch       : {args.prefetch}")
     print(f"TTA            : {not args.no_tta}\n")
 
-    from unet3d import UNet3D
+    from models.unet3d import UNet3D
     ckpt = torch.load(args.model, map_location=device)
     model = UNet3D(
         in_channels=1, out_channels=1,

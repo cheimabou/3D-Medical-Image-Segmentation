@@ -13,7 +13,7 @@ import torch.nn.functional as F
 import pylidc as pl
 from scipy.ndimage import label as nd_label
 
-from unet3d import UNet3D
+from models.unet3d import UNet3D
 
 warnings.filterwarnings("ignore")
 

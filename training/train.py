@@ -14,8 +14,8 @@ from torch.optim import Adam
 from torch.optim.lr_scheduler import CosineAnnealingLR
 
 from model_unet3d import UNet3D, count_parameters, total_loss as _total_loss
-from dataset import NoduleDataset3D
-from metrics import compute_all_metrics
+from data.dataset import NoduleDataset3D
+from evaluation.metrics import compute_all_metrics
 
 
 

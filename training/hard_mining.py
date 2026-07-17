@@ -12,9 +12,9 @@ import torch
 from scipy.ndimage import zoom
 import pylidc as pl
 
-from unet3d import UNet3D
+from models.unet3d import UNet3D
 from scan_inference_new import sliding_window_3d
-from preprocess import segment_lung_mask, apply_hu_window, compute_zoom_factors, resample_volume
+from preprocessing.preprocess import segment_lung_mask, apply_hu_window, compute_zoom_factors, resample_volume
 
 # ── Config ──────────────────────────────────────────────────────
 DATA_PATH      = "/workspace/LIDC-IDRI-organized"
