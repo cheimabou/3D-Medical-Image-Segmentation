@@ -13,9 +13,6 @@ Developed in PyTorch and MONAI as part of a Master's thesis in Data Science (Con
 - [Method](#method)
 - [Results](#results)
 - [Limitations](#limitations)
-- [Setup & Usage](#setup--usage)
-- [Repository Structure](#repository-structure)
-- [References](#references)
 
 ## Motivation
 
@@ -120,42 +117,3 @@ Under the same strict consensus protocol (≥50% agreement, ≥2 raters), indepe
 - **Small test set for the hardest subgroups** (GGO n=19, part-solid n=12): a single additional correct/incorrect detection shifts the reported sensitivity by ~5.3%, so these subgroup numbers should be read with wide uncertainty.
 - **GGO Dice (0.537)**, while within human inter-annotator range, remains below what's clinically sufficient. Planned directions: weighted GGO loss, more GGO training data, ensembling.
 
-## Setup & Usage
-
-> Fill in with your actual environment — e.g.:
-```bash
-git clone https://github.com/cheimabou/3D-Medical-Image-Segmentation.git
-cd 3D-Medical-Image-Segmentation
-pip install -r requirements.txt
-```
-```bash
-# Preprocessing
-python preprocessing/run_preprocessing.py --input <raw_scans_dir> --output <processed_dir>
-
-# Training
-python training/train.py --config configs/default.yaml
-
-# Scan-level inference
-python inference/run_inference.py --checkpoint <model.pt> --scan <scan.nii.gz>
-
-# Evaluation
-python evaluation/evaluate.py --predictions <preds_dir> --ground_truth <gt_dir>
-```
-
-## Repository Structure
-```
-├── data/            # dataset loading / splits
-├── preprocessing/   # resampling, HU windowing, lung masking, consensus mask
-├── training/         # 3D U-Net + attention gates, loss, training loop
-├── inference/        # sliding-window scan-level inference, FP reduction
-├── evaluation/        # Dice, CPM, sensitivity, stratified metrics
-├── models/           # architecture definitions
-└── images/           # pipeline diagrams and qualitative results
-```
-
-## References
-
-- Çiçek et al., "3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation," MICCAI 2016.
-- Armato et al., "The Lung Image Database Consortium (LIDC) and Image Database Resource Initiative (IDRI)," Medical Physics, 2011.
-- Roy et al., "Risk of adenocarcinoma in patients with a suspicious ground-glass opacity," Journal of Thoracic Disease, 2022.
-- Cheng et al., "Small nodules (≤6mm) of multiple primary lung cancers: prevalence and management," Journal of Cardiothoracic Surgery, 2022.
