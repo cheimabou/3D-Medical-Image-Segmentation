@@ -1,10 +1,8 @@
 
 # 🫁 Deep Learning-Based 3D Segmentation of Pulmonary Nodules for Lung Cancer Detection
 
-An end-to-end deep learning framework for automated pulmonary nodule segmentation and detection from volumetric chest CT scans, built on a customized 3D U-Net with attention gates and a two-stage detection pipeline.
-
+This repository presents an end-to-end deep learning framework for automated pulmonary nodule segmentation from volumetric chest CT scans. The framework integrates medical image preprocessing, customized 3D U-Net segmentation, scan-level inference, false-positive reduction, and comprehensive evaluation using the LIDC-IDRI dataset.
 Developed in PyTorch and MONAI as part of a Master's thesis in Data Science (Constantine 2 University), this repository covers preprocessing, training, scan-level inference, false-positive reduction, and evaluation on the LIDC-IDRI dataset — benchmarked against nnU-Net.
-
 ![Pipeline](images/fullpipelinediagram.png)
 
 ## Table of Contents
